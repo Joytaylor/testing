@@ -3,8 +3,16 @@ html {
   box-sizing: border-box;
   font: 16px sans-serif;
 }
-.MuiGridListTile-root {
-  height: 300px;
+body {
+  background-color: #e5d3b3;
+  margin: auto;
+}
+h1 {
+  margin-left: 5%;
+  margin-right: 15%;
+  color: white;
+  text-decoration: underline dotted black;
+  -webkit-text-stroke: 1px black;
 }
 /*Tetris Stuff */
 *,

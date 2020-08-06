@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Projects from "../components/projects";
 import AppBar from "@material-ui/core/AppBar";
@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme: any) => ({
   items: {
     marginTop: "5%",
   },
+  navBar: {
+    marginLeft: "100%",
+    marginRight: "10%",
+  },
 }));
 
 export default function Pages() {
@@ -21,17 +25,19 @@ export default function Pages() {
   const pages = [<Projects />, <ContactMe />]; // place new pages here after importing them
   return (
     <div>
-      <div style={{ height: 100 }}>
+      <div style={{ height: 100 }} className={classes.navBar}>
         <AppBar>
-          <Tabs centered>
-            <img src="./jticon.png" width="75px" height="75px" />
+          <div>
+            <Tabs centered>
+              <img src="./images/jticon.png" width="75px" height="75px" />
 
-            <Tab label="Home" />
-            <Tab label="Projects" />
-            <Tab label="Organizations" />
-            <Tab label="Awards" />
-            <Tab label="Contact" />
-          </Tabs>
+              <Tab label="Home" />
+              <Tab label="Projects" />
+              <Tab label="Organizations" />
+              <Tab label="Awards" />
+              <Tab label="Contact" />
+            </Tabs>
+          </div>
         </AppBar>
       </div>
 

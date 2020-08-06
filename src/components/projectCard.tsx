@@ -37,7 +37,6 @@ export default function RecipeReviewCard(props: any) {
   const [expanded, setExpanded] = React.useState(false);
 
   let created = new Date();
-  created.setDate(props.sDate.day);
   created.setMonth(props.sDate.month);
   created.setFullYear(props.sDate.year);
   const handleExpandClick = () => {
@@ -47,13 +46,18 @@ export default function RecipeReviewCard(props: any) {
   return (
     <Card className={classes.cRoot}>
       <CardHeader
-        action={
+        /*action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
-        }
+        }*/
         title={props.title}
-        subheader={"Started " + created.toDateString()}
+        subheader={
+          "Started " +
+          created.toLocaleString("default", { month: "long" }) +
+          " " +
+          created.getFullYear()
+        }
       />
       <CardMedia
         className={classes.media}
