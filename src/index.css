@@ -1,18 +1,18 @@
 /* Main styles */
 html {
   box-sizing: border-box;
-  font: 16px sans-serif;
+  font: 16px sans-serif\;;
 }
 body {
-  background-color: #e5d3b3;
+  background-color: #ffffff;
   margin: auto;
 }
 h1 {
   margin-left: 5%;
   margin-right: 15%;
-  color: white;
-  text-decoration: underline dotted black;
-  -webkit-text-stroke: 1px black;
+  font-family: "Pacifico", cursive;
+  color: black;
+  text-decoration: underline solid black;
 }
 /*Tetris Stuff */
 *,

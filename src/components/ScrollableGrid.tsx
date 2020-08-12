@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: "wrap",
       padding: "5%",
       justifyContent: "space-around",
-      backgroundColor: "rgba(255,255,255,.5)",
+      backgroundColor: "rgba(200,200,200,.5)",
     },
 
     gridList: {
@@ -38,7 +38,8 @@ export default function Project(props: any) {
               sDate={tile.sDate}
               img={tile.img}
               sentence={tile.sentence}
-              descr={tile.description}
+              tools={tile.tools}
+              description={tile.description}
             />
           </GridListTile>
         ))}

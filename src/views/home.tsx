@@ -32,7 +32,7 @@ export default function Pages() {
               <img src="./images/jticon.png" width="75px" height="75px" />
 
               <Tab label="Home" />
-              <Tab label="Projects" />
+              <Tab label="Projects and Experiences" />
               <Tab label="Organizations" />
               <Tab label="Awards" />
               <Tab label="Contact" />

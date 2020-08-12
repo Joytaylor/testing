@@ -5,7 +5,7 @@ import ScrollableGrid from "./ScrollableGrid";
 export default function Project() {
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>Projects and Experiences</h1>
       <ScrollableGrid data={Data}></ScrollableGrid>
     </div>
   );

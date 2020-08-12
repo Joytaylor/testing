@@ -37,7 +37,7 @@ export default function RecipeReviewCard(props: any) {
   const [expanded, setExpanded] = React.useState(false);
 
   let created = new Date();
-  created.setMonth(props.sDate.month);
+  created.setMonth(props.sDate.month - 1);
   created.setFullYear(props.sDate.year);
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -53,7 +53,6 @@ export default function RecipeReviewCard(props: any) {
         }*/
         title={props.title}
         subheader={
-          "Started " +
           created.toLocaleString("default", { month: "long" }) +
           " " +
           created.getFullYear()
@@ -84,8 +83,12 @@ export default function RecipeReviewCard(props: any) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>More:</Typography>
+          {props.tools != null ? "Tools:" : ""}
+          <ul>
+            {props.tools && props.tools.map((tool: any) => <li>{tool}</li>)}
+          </ul>
 
-          <Typography paragraph>{props.descr}</Typography>
+          <Typography paragraph>{props.description}</Typography>
         </CardContent>
       </Collapse>
     </Card>
