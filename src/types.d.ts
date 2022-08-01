@@ -3,5 +3,6 @@ export interface Projects {
   eDate: Date;
   title: string;
   description: string;
+  img:?string;
   link?: string;
 }

@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
     pRoot: {
       display: "flex",
       flexWrap: "wrap",
-      padding: "5%",
+      padding: "1%",
       justifyContent: "space-around",
       backgroundColor: "rgba(200,200,200,.5)",
     },
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
     gridList: {
       flexWrap: "nowrap",
       transform: "translateZ(0)",
-      paddingBlock: "20%",
+      paddingBlock: "2%",
     },
 
     title: {
@@ -36,10 +36,14 @@ export default function Project(props: any) {
             <ProjectCard
               title={tile.title}
               sDate={tile.sDate}
+              eDate={tile.eDate}
               img={tile.img}
               sentence={tile.sentence}
+              explored={tile.explored}
               tools={tile.tools}
               description={tile.description}
+              repo = {tile.repo}
+              link = {tile.link}
             />
           </GridListTile>
         ))}
